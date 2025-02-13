@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Development Goals - Tamil Nadu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f4f4f9; color: #333; }
+        .navbar { background-color: #1e3a8a; }
+        .navbar-brand, .nav-link { color: #ffffff !important; }
+        .navbar-nav .nav-link:hover { color: #93c5fd !important; }
+        header img { height: 450px; object-fit: cover; }
+        .card { border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s; background: #ffffff; }
+        .card:hover { transform: translateY(-8px); }
+        .section-title { color: #1e40af; font-weight: bold; text-align: center; margin: 30px 0; }
+        footer { background-color: #1e3a8a; color: white; padding: 20px 0; text-align: center; }
+        .highlight { color: #f43f5e; font-weight: bold; }
+        .goals-container { display: flex; justify-content: center; gap: 20px; }
+        .initiatives-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .initiative-card { width: 45%; min-width: 300px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">SDG Tamil Nadu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#goals">Goals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#progress">Progress</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#initiatives">Initiatives</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container mt-4">
+        <img src="jeevan.jpg" class="w-100" alt="SDG Tamil Nadu Banner">
+    </header>
+
+    <section class="container py-5" id="goals">
+        <h1 class="section-title">Breaking Barriers: Education and Economic Upliftment</h1>
+        <div class="goals-container">
+            <div class="card p-4 text-center">
+                <h5 class="highlight"><a href="no_poverty.html">No Poverty</a></h5>
+                <p>Eradicating extreme poverty everywhere through inclusive development programs.</p>
+            </div>
+            <div class="card p-4 text-center">
+                <h5 class="highlight"><a href="quality_education.html">Quality Education</a></h5>
+                <p>Ensuring inclusive and equitable quality education for all in Tamil Nadu.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container py-5" id="about">
+        <div class="card about-card p-4 text-center" onclick="toggleAbout()">
+            <h2 class="section-title">About This Website</h2>
+            <p id="about-text">
+                This website is dedicated to promoting sustainable development in Tamil Nadu, with a focus on two critical goals: 
+                <span class="highlight">No Poverty</span> and <span class="highlight">Quality Education</span>. 
+                We explore initiatives, progress, and strategies aimed at eradicating poverty and ensuring accessible, high-quality education 
+                for all. By highlighting key programs and real-world impact, we aim to drive awareness and action towards a brighter future.
+            </p>
+        </div>
+    </section>
+    
+    <style>
+        .about-card {
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .about-card:hover {
+            transform: translateY(-5px);
+        }
+        .expand {
+            animation: expandText 0.5s ease-in-out forwards;
+        }
+        .collapse {
+            animation: collapseText 0.5s ease-in-out forwards;
+        }
+        @keyframes expandText {
+            from { max-height: 0; opacity: 0; }
+            to { max-height: 500px; opacity: 1; }
+        }
+        @keyframes collapseText {
+            from { max-height: 500px; opacity: 1; }
+            to { max-height: 0; opacity: 0; }
+        }
+    </style>
+    
+    <script>
+        let expanded = true;
+        function toggleAbout() {
+            let aboutText = document.getElementById("about-text");
+            if (expanded) {
+                aboutText.classList.remove("expand");
+                aboutText.classList.add("collapse");
+            } else {
+                aboutText.classList.remove("collapse");
+                aboutText.classList.add("expand");
+            }
+            expanded = !expanded;
+        }
+    </script>
+    
+    
+
+    <section class="container py-5 bg-light" id="progress">
+        <h2 class="section-title">Progress Dashboard</h2>
+        <canvas id="progressChart"></canvas>
+    </section>
+
+    <section class="container py-5" id="initiatives">
+        <h2 class="section-title">Key Initiatives in Tamil Nadu</h2>
+        <div class="initiatives-container">
+            <div class="card p-3 initiative-card">
+                <h5>Women Empowerment Programs</h5>
+                <p>Various initiatives to promote gender equality and women's leadership.</p>
+            </div>
+            <div class="card p-3 initiative-card">
+                <h5>Green Energy Projects</h5>
+                <p>Adoption of renewable energy sources to reduce carbon footprints.</p>
+            </div>
+            <div class="card p-3 initiative-card">
+                <h5>Smart Agriculture Practices</h5>
+                <p>Use of IoT and AI for precision farming, water conservation, and yield optimization.</p>
+            </div>
+            <div class="card p-3 initiative-card">
+                <h5>Healthcare Accessibility Programs</h5>
+                <p>Expanding telemedicine, mobile health units, and affordable healthcare for rural areas.</p>
+            </div>
+            <div class="card p-3 initiative-card">
+                <h5>Skill Development and Employment</h5>
+                <p>Government-backed training programs to enhance youth employability and entrepreneurship.</p>
+            </div>
+            <div class="card p-3 initiative-card">
+                <h5>Water Resource Management</h5>
+                <p>Rainwater harvesting and sustainable water conservation techniques to combat droughts.</p>
+            </div>
+            <div class="card p-3 initiative-card">
+                <h5>Affordable Housing for All</h5>
+                <p>State-led projects to provide safe and affordable housing to economically weaker sections.</p>
+            </div>
+            <div class="card p-3 initiative-card">
+                <h5>Digital Literacy & E-Governance</h5>
+                <p>Promoting digital education, e-services, and transparent governance through technology.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h1>Developed by Jeevan P Rajith 21MIS1040</h1>
+        <p>A platform to track and promote Sustainable Development Goals in Tamil Nadu.</p>
+    </footer>
+    
+
+    <footer>
+        <p>&copy; 2025 Tamil Nadu SDG Portal. All rights reserved.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('progressChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2020', '2021', '2022', '2023', '2024'],
+                datasets: [
+                    {
+                        label: 'Poverty Reduction (%)',
+                        data: [20, 30, 40, 50, 65],
+                        backgroundColor: '#3b82f6',
+                        borderColor: '#1e40af',
+                        fill: true
+                    },
+                    {
+                        label: 'Education Quality (%)',
+                        data: [50, 60, 70, 80, 90],
+                        backgroundColor: '#f43f5e',
+                        borderColor: '#be123c',
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true, max: 100 }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
